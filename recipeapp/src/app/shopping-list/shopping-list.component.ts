@@ -8,6 +8,9 @@ import { ShoppingService } from './shopping.service';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+  addIngredients(ingredients: Ingredient[]) {
+    throw new Error('Method not implemented.');
+  }
   ingredients!: Ingredient[];
 
   constructor(private shoppingServices: ShoppingService) { }
