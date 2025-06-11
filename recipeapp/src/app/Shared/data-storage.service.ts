@@ -25,13 +25,14 @@ export class DataStorageService{
             exhaustMap(user => {
             return this.http.get<Recipe[]>(
                 'https://recipe-app-76fc8-default-rtdb.firebaseio.com//recipes.json').pipe(map( recipes => {
-                return recipes.map( recipe => {
-                    return {...recipe, ingredients : recipe.ingredients ? recipe.ingredients : []
-                    }
-                });
-            }),tap(recipes =>{
+                    return recipes.map( recipe => {
+                        return {...recipe, ingredients : recipe.ingredients ? recipe.ingredients : []
+                        }
+                    });
+                }),tap(recipes =>{
                 this.recipeService.setRecipe(recipes);
-            }));
+                }
+            ));
         }))
-    }    
+    }     
 }

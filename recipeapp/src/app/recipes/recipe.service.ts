@@ -40,7 +40,7 @@ export class RecipeService {
     this.recipeChange.next(this.recipes.slice());
   }
 
-  getRecipes(){
+  getRecipes(){ 
     return this.recipes.slice();
   }
   getRecipe(index: number){
@@ -61,4 +61,5 @@ export class RecipeService {
     this.recipes.splice(index, 1);
     this.recipeChange.next(this.recipes.slice());
   }
+  
 }
