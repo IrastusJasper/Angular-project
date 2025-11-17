@@ -31,7 +31,9 @@
                         selectedTab === 'mern' ? mernSkills :
                         otherSkills"
     >
-      <div class="skill-icon">{{ skill.icon }}</div>
+      <div class="skill-icon">
+        <img [src]="skill.icon" [alt]="skill.name" />
+      </div>
       <div class="skill-name">{{ skill.name }}</div>
       <div class="progress-bar">
         <div class="progress" [style.width.%]="skill.level"></div>

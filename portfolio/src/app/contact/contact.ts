@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-contact',

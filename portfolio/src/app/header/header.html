@@ -1,21 +1,37 @@
-<nav>
-  <div class="navbar">
-    <ul class="navbar-navbar">
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <span class="brand-text">Portfolio</span>
+    </div>
+    
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="navbar-menu" [class.open]="isMenuOpen">
       <li class="navbar-item">
-        <a class="navbar-link">Home</a>
+        <a class="navbar-link" (click)="closeMenu()">Home</a>
       </li>
       <li class="navbar-item">
-        <a class="navbar-link" href="#about">About</a>
+        <a class="navbar-link" href="#about" (click)="closeMenu()">About</a>
       </li>
       <li class="navbar-item">
-        <a class="navbar-link" href="#skills">Skills</a>
+        <a class="navbar-link" href="#skills" (click)="closeMenu()">Skills</a>
       </li>
       <li class="navbar-item">
-        <a class="navbar-link" href="#education">Education</a>
+        <a class="navbar-link" href="#education" (click)="closeMenu()">Education</a>
       </li>
       <li class="navbar-item">
-        <a class="navbar-link" href="#contact">Contact</a>
+        <a class="navbar-link" href="#contact" (click)="closeMenu()">Contact</a>
       </li>
     </ul>
+
+    <div class="navbar-social">
+      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="" aria-hidden="true">
+      </a>
+    </div>
   </div>
 </nav> 
